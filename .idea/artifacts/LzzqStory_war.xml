@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="LzzqStory:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="LzzqStory.war">
+      <element id="artifact" artifact-name="LzzqStory:war exploded" />
+    </root>
+  </artifact>
+</component>
