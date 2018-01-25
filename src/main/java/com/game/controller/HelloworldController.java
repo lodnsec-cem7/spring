@@ -5,12 +5,15 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
 
 
 @Controller
@@ -28,11 +31,14 @@ public class HelloworldController {
     }*/
 
 	@RequestMapping(value="/index",method=RequestMethod.GET)
-	public String index(Model model)
+	@ResponseBody
+	public Map<String,String> index(Model model)
 	{
-
-		model.addAttribute("test", "13");
-		return "index";
+		Map<String,String> result = new HashMap();
+		result.put("aa","123");
+		result.put("bb","dsads");
+		//model.addAttribute("test", "13");
+		return result;
 	}
 	@RequestMapping(value="/dologin",method=RequestMethod.POST)
 	public void dologin(HttpServletRequest request,HttpServletResponse response,String username,MultipartFile img)throws IOException, ServletException

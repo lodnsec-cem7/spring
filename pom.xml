@@ -10,6 +10,7 @@
   <properties>
      <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
      <spring.version>4.3.7.RELEASE</spring.version>
+      <jackson.version>2.8.8</jackson.version>
   </properties>
   <dependencies>
     <dependency>
@@ -23,6 +24,22 @@
           <groupId>commons-fileupload</groupId>
           <artifactId>commons-fileupload</artifactId>
           <version>1.3.2</version>
+      </dependency>
+      <!-- springmvc对json的处理依赖jackson-->
+      <dependency>
+          <groupId>com.fasterxml.jackson.core</groupId>
+          <artifactId>jackson-core</artifactId>
+          <version>${jackson.version}</version>
+      </dependency>
+      <dependency>
+          <groupId>com.fasterxml.jackson.core</groupId>
+          <artifactId>jackson-annotations</artifactId>
+          <version>${jackson.version}</version>
+      </dependency>
+      <dependency>
+          <groupId>com.fasterxml.jackson.core</groupId>
+          <artifactId>jackson-databind</artifactId>
+          <version>${jackson.version}</version>
       </dependency>
       <!-- spring mvc依赖 -->
 	 <dependency>
