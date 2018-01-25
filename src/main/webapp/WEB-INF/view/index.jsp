@@ -10,11 +10,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <title>test</title>
 </head>
 <body>
-	<form action="<%=basePath%>helloworld/dologin" method="post"  enctype="multipart/form-data">
+	<form action="<%=basePath%>helloworld/dologin" method="post" enctype="multipart/form-data" >
 		用户名:<input type="text" name="username" /><br>
-		密码:<input type="text" name="password" /><br>
-		<!-- 测试图片:<input type="file" name="img" /> -->
-		
+		<%--密码:<input type="text" name="password" /><br>--%>
+		测试图片:<input type="file" name="img" />
 		<input type="submit" value="登录" />
 	</form>
 </body>
